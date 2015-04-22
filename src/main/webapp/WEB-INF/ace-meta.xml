@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ace-web-app>
+    <url-rewrite>
+        <rule>
+            <condition field="host">podcast.yidumen.com</condition>
+            <path>/</path>
+            <rewrite flags="P">/service/podcast</rewrite>
+        </rule>
+    </url-rewrite>
+</ace-web-app>
