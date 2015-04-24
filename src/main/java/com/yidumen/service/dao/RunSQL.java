@@ -20,5 +20,9 @@ public class RunSQL {
     public List<Map<String, Object>> findAllVideos() {
         return jdbcTemplate.queryForList("SELECT video.* FROM video JOIN tag_video ON video.id = tag_video.videos_id JOIN tag ON tag.id = tag_video.tags_id AND tag.tagname = '聊天室' WHERE video.status = 0 ORDER BY video.pubDate DESC");
     }
+    
+    public String getVideoTitle(String file) {
+        return jdbcTemplate.queryForObject("SELECT title FROM video WHERE file = ?", String.class, file);
+    }
 
 }

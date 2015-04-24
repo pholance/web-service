@@ -1,1 +1,1 @@
-<resource include="/video_dl/*/*" />
+<resource include="^(.*)$" />

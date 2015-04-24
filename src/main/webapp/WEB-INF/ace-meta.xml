@@ -4,7 +4,7 @@
         <rule>
             <condition field="host">podcast.yidumen.com</condition>
             <path>/</path>
-            <rewrite flags="P">/service/podcast</rewrite>
+            <rewrite flags="P">/podcast</rewrite>
         </rule>
     </url-rewrite>
 </ace-web-app>

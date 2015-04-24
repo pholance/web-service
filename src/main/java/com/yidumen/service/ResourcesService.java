@@ -32,9 +32,9 @@ public final class ResourcesService extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        client = new OSSClient("http://oss-internal.aliyuncs.com",
-                "your-key",
-                "your-secret");
+        client = new OSSClient("",
+                "",
+                "");
     }
 
     @Override

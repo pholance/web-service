@@ -19,4 +19,15 @@
 
     <bean id="dao" class="com.yidumen.service.dao.RunSQL">
     </bean>
+    
+    <context:property-placeholder location="classpath:appengine-service.properties" />
+    <bean id="ossClient" class="com.aliyun.openservices.oss.OSSClient">
+        <constructor-arg index="0" value="${oss.ydm.endpoint}" />
+        <constructor-arg index="1" value="${oss.ydm.accessKeyId}" />
+        <constructor-arg index="2" value="${oss.ydm.accessKeySecret}" />
+    </bean>
+
+    <bean id="bucket" class="java.lang.String">
+        <constructor-arg value="${oss.ydm.bucket}" />
+    </bean>
 </beans>
