@@ -135,6 +135,8 @@ public class Video {
         LOG.debug(url);
         final HttpResponse httpResponse = getHttpResponse(request, response, url);
         response.setContentType("application/octet-stream");
+//        final String filename = URLEncoder.encode(file + "_" + title + "_" + resolution + ".mp4", "utf-8");
+//        response.setHeader("Content-Disposition", "attachment;filename=\"" + filename + "\";filename*=utf-8''"+filename);
         final HttpEntity entity = httpResponse.getEntity();
         if (entity == null) {
             return;
